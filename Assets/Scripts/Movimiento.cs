@@ -1,22 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movimiento : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private Rigidbody2D Rigidbody2D;
-    [SerializeField] private float velocidad;
-    [SerializeField] private Vector2 direccion;
+    private Rigidbody2D rb2D;
+    public float velocidad;
+    public Vector2 direccion;
+    public SpriteRenderer sprite;
 
 
     void Start()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         direccion = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
@@ -24,7 +24,21 @@ public class Movimiento : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Rigidbody2D.MovePosition(Rigidbody2D.position + direccion * velocidad * Time.fixedDeltaTime);
+       
+        rb2D.MovePosition(rb2D.position + direccion * velocidad * Time.fixedDeltaTime);
+        float horizontal = Input.GetAxis("Horizontal");
+        rb2D.velocity = new Vector2(horizontal * velocidad, 0);
+
+        if (horizontal > 0)
+        {
+            sprite.flipY = false;
+        }
+
+        if (horizontal < 0)
+        {
+            sprite.flipY = true;
+        }
+
     }
 
 }
