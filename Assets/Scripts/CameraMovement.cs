@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CameraVibration : MonoBehaviour
 {
-    public KeyCode vibrationKey = KeyCode.G;
     public float vibrationIntensity = 0.1f;
     public float vibrationDuration = 0.1f;
     public float vibrationSpeed = 10f;
@@ -18,10 +17,7 @@ public class CameraVibration : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(vibrationKey) && !isVibrating)
-        {
-            StartVibration();
-        }
+
 
         if (isVibrating)
         {
@@ -37,11 +33,12 @@ public class CameraVibration : MonoBehaviour
         }
     }
 
-    void StartVibration()
+    public void StartVibration()
     {
         vibrationTimer = 0f;
         isVibrating = true;
     }
+
 
     void StopVibration()
     {
