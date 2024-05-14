@@ -13,7 +13,7 @@ public class VidasPersonaje : MonoBehaviour
     {
         if (Input.GetKeyDown(oneVidaLessKey))
         {
-            LoseLife();
+            LoseLife(1);
             cameraVibration.StartVibration();
         }
 
@@ -24,9 +24,9 @@ public class VidasPersonaje : MonoBehaviour
         
     }
 
-    void LoseLife()
+    public void LoseLife(int damage)
     {
-        lives--;
+        lives -= damage; 
         Debug.Log("-1 de vida, te quedan: " + lives);
 
         if (lives <= 0)
