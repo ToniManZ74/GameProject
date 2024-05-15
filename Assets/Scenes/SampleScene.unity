@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866588ba5cf622848a87a25c6c773c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePJ: 1
+  damage: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091011771918854822, guid: 9bfbf6aa5110b7e4db0ba8b383795f66, type: 3}
       propertyPath: m_TagString
-      value: Enemigo
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
