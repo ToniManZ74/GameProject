@@ -6,6 +6,8 @@ TagManager:
   tags:
   - reloj
   - pocion
+  - livesText
+  - Enemigo
   layers:
   - Default
   - TransparentFX

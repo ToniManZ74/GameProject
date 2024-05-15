@@ -9,6 +9,12 @@ public class EnemigoPersecucion : MonoBehaviour
     bool perseguirP;
     public int speed;
     public Transform objetivo;
+    private Animator animacion;
+
+    void Start()
+    {
+        animacion = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -19,12 +25,13 @@ public class EnemigoPersecucion : MonoBehaviour
         if (perseguirP)
         {
             transform.position = Vector2.MoveTowards(transform.position, enemyPos, speed * Time.deltaTime);
-            
+            animacion.SetBool("ataque", perseguirP);
         }
 
         if (Vector2.Distance(transform.position, enemyPos) > 12f)
         {
             perseguirP = false;
+            animacion.SetBool("ataque", perseguirP);
         }
     }
 
