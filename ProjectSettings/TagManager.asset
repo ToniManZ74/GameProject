@@ -4,13 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - reloj
   - pocion
-=======
   - livesText
   - Enemigo
->>>>>>> Daño
   layers:
   - Default
   - TransparentFX
