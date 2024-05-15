@@ -8,14 +8,12 @@ public class AtaqueEenemigo : MonoBehaviour
     private Animator animacion;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         rbody2D = GetComponent<Rigidbody2D>();
         animacion = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -16,5 +16,5 @@ public class AtaquePj : MonoBehaviour
         animacion.SetBool("Atacar", Input.GetKeyDown(KeyCode.T));
     }
 
-    
+
 }

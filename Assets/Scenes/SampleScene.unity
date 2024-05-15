@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866588ba5cf622848a87a25c6c773c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +423,6 @@ GameObject:
   m_Component:
   - component: {fileID: 712802726}
   - component: {fileID: 712802728}
-  - component: {fileID: 712802729}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Player
@@ -491,22 +490,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.2442183, y: 2.8578434}
   m_EdgeRadius: 0
---- !u!114 &712802729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712802725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e8758190d977154bbf07248caf5602b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraVibration: {fileID: 519420033}
-  lives: 3
-  oneVidaLessKey: 121
-  oneVidaUpKey: 117
 --- !u!1 &784326778
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +607,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7635163368506140807, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
   m_PrefabInstance: {fileID: 1699531718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &816346425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816346408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8758190d977154bbf07248caf5602b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraVibration: {fileID: 519420033}
+  lives: 3
+  oneVidaLessKey: 121
+  oneVidaUpKey: 117
 --- !u!1 &851335725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1109,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7635163368506140807, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 712802726}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2554693752480291941, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 816346425}
   m_SourcePrefab: {fileID: 100100000, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
 --- !u!1001 &1726237257
 PrefabInstance:

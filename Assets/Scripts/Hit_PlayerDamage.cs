@@ -10,7 +10,7 @@ public class Hit_PlayerDamage : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<VidasPersonaje>().LoseLife(damage);
+            collision.gameObject.GetComponentInParent<VidasPersonaje>().LoseLife(damage);
         }
     }
     void Start()
