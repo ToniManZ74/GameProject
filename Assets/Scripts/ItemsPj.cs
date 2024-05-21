@@ -10,6 +10,10 @@ public class ItemsPj : MonoBehaviour
     public float duracionV = 3f;
     public float duracionI = 3f;
     public float powerUpTime = 0f;
+    public bool isInvincible = false; 
+
+
+
 
     void Start()
     {
@@ -36,11 +40,14 @@ public class ItemsPj : MonoBehaviour
                 powerUpTime += Time.deltaTime;
                 if (powerUpTime <= duracionI)
                 {
-                   Debug.Log("Invencible");
+                    isInvincible = true;
+                    Debug.Log("Invencible");
                 }
                 else
                 {
+                    isInvincible = false;
                     NoItemOn();
+                    Debug.Log("Fin de la invencibilidad");
                 }
             break;
 

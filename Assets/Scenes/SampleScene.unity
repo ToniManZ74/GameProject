@@ -623,6 +623,19 @@ MonoBehaviour:
   lives: 3
   oneVidaLessKey: 121
   oneVidaUpKey: 117
+  vidaMaxPersonaje: 7
+  PowerUpActual: {fileID: 816346426}
+--- !u!114 &816346426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1501060807398262266, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+  m_PrefabInstance: {fileID: 1699531718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816346408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6212cc3009e94514cb616a89b824e9b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851335725
 GameObject:
   m_ObjectHideFlags: 0
