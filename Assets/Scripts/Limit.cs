@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Limit : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Transform Transform;
     public Vector2 Hrange = Vector2.zero;
     public Vector2 Vrange = Vector2.zero;
@@ -21,9 +20,4 @@ public class Limit : MonoBehaviour
         Transform = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

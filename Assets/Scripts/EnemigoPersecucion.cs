@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemigoPersecucion : MonoBehaviour
 {
     Vector2 enemyPos;
-    public GameObject PlayerM;
-    bool perseguirP;
+    public GameObject player;
+    bool perseguir;
     public int speed;
     public Transform objetivo;
     private Animator animacion;
@@ -22,26 +22,25 @@ public class EnemigoPersecucion : MonoBehaviour
         float anguloGrados = (180 / Mathf.PI) * anguloRadianes - 90;
         transform.rotation = Quaternion.Euler(0, 0, anguloGrados);
 
-        if (perseguirP)
+        if (perseguir) //Si es cierto, el enemigo empezará a atacar y, además, la vista y la direccion de este se dirigirá hacia el jugador
         {
             transform.position = Vector2.MoveTowards(transform.position, enemyPos, speed * Time.deltaTime);
-            animacion.SetBool("ataque", perseguirP);
+            animacion.SetBool("ataque", perseguir);
         }
 
-        if (Vector2.Distance(transform.position, enemyPos) > 12f)
+        if (Vector2.Distance(transform.position, enemyPos) > 12f) //Si es falso, el enemigo no perseguirá al jugador
         {
-            perseguirP = false;
-            animacion.SetBool("ataque", perseguirP);
+            perseguir = false;
         }
     }
 
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag.Equals("Player"))
+        if (collision.tag.Equals("Player")) //Si el jugador está dentro del rango del enemigo, comienza la persecución 
         {
-            enemyPos = PlayerM.transform.position;
-            perseguirP = true;
+            enemyPos = player.transform.position;
+            perseguir = true;
         }
     }
 }

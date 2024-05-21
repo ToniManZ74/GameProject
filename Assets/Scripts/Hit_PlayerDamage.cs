@@ -8,17 +8,9 @@ public class Hit_PlayerDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")) //Si alcanza al jugador, se llamará a la funcion LoseLife que tiene el jugador para que pierda la cantidad de daño deseada
         {
-            collision.gameObject.GetComponentInParent<VidasPersonaje>().LoseLife(damage);
+            collision.gameObject.GetComponentInParent<VidasPersonaje>().LoseLife(damage); 
         }
-    }
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
     }
 }

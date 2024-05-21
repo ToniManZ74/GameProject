@@ -18,11 +18,11 @@ public class ItemsPj : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O)) //Pulsa O para hacerte invencible 
         {
             InvencibleOn();
         }
-        else if (Input.GetKeyDown(KeyCode.P))
+        else if (Input.GetKeyDown(KeyCode.P)) //Pulsa P para ralentizar la velocidad de juego
         {
             VelocidadOn();
         }

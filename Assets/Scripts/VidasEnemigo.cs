@@ -8,11 +8,14 @@ public class VidasEnemigo : MonoBehaviour
 
     void Start()
     {
-        
+       
     }
 
     void Update()
     {
-        
+        if (vida <= 0)
+        {
+            Destroy(gameObject); 
+        }
     }
 }

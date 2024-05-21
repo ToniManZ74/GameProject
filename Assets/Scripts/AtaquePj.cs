@@ -13,7 +13,7 @@ public class AtaquePj : MonoBehaviour
 
     void Update()
     {
-        animacion.SetBool("Atacar", Input.GetKeyDown(KeyCode.T));
+        animacion.SetBool("Atacar", Input.GetKeyDown(KeyCode.Space)); //Pulsa espacio para atacar 
     }
 
 
