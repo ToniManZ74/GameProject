@@ -7,40 +7,49 @@ public class VidasPersonaje : MonoBehaviour
     public int lives = 3;
     public KeyCode oneVidaLessKey = KeyCode.Y;
     public KeyCode oneVidaUpKey = KeyCode.U;
+    public int vidaMaxPersonaje = 7;
+    public ItemsPj PowerUpActual;
+
+
 
 
     void Update()
     {
+        
         if (Input.GetKeyDown(oneVidaLessKey))
         {
             LoseLife(1);
-            cameraVibration.StartVibration();
         }
 
         if (Input.GetKeyDown(oneVidaUpKey))
         {
             LifeUp();
         }
+
         
     }
 
     public void LoseLife(int damage)
     {
-        lives -= damage; 
-        Debug.Log("-1 de vida, te quedan: " + lives);
+       if (!PowerUpActual.isInvincible)
+       {
+            lives -= damage;
+            Debug.Log("-1 de vida, te quedan: " + lives);
 
-        if (lives <= 0)
-        {
-            Debug.Log("Game Over");
-            Time.timeScale = 0f;
+            if (lives <= 0)
+            {
+                Debug.Log("Game Over");
+                Time.timeScale = 0f;
+            }
+            cameraVibration.StartVibration();
+            UpdateLivesText();
         }
-        UpdateLivesText();
     }
     void LifeUp()
     {
-        if (lives >= 5)
+        if (lives >= vidaMaxPersonaje)
         {
-            Debug.Log("Tienes 5 de vida. No puedes tener mas");
+            Debug.Log("Tienes " + vidaMaxPersonaje + " de vida. No puedes tener mas");
         }
         else
         {
