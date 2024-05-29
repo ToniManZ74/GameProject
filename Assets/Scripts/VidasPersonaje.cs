@@ -9,9 +9,14 @@ public class VidasPersonaje : MonoBehaviour
     public KeyCode oneVidaUpKey = KeyCode.U;
     public int vidaMaxPersonaje = 7;
     public ItemsPj PowerUpActual;
+    private AudioSource audio;
+    public AudioClip sound;
 
 
-
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -41,6 +46,7 @@ public class VidasPersonaje : MonoBehaviour
                 Debug.Log("Game Over");
                 Time.timeScale = 0f;
             }
+            audio.PlayOneShot(sound);
             cameraVibration.StartVibration();
             UpdateLivesText();
         }
