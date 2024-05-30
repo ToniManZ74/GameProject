@@ -744,15 +744,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 26cabbdbc63198d4f8d1dcf62c59a08e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.029
-  m_Pitch: 1
+  m_Volume: 0.434
+  m_Pitch: 0.95
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 133
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1307,6 +1307,10 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 8300000, guid: 26cabbdbc63198d4f8d1dcf62c59a08e, type: 3}
+    - target: {fileID: 1501060807398262266, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+      propertyPath: sound2
+      value: 
+      objectReference: {fileID: 8300000, guid: 165b7751c2165cd4386bfe7671d3f353, type: 3}
     - target: {fileID: 3705411519281638883, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
       propertyPath: m_Constraints
       value: 4

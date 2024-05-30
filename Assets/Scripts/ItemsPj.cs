@@ -13,7 +13,7 @@ public class ItemsPj : MonoBehaviour
     public bool isInvincible = false;
     private AudioSource audio;
     public AudioClip sound;
-
+    public AudioClip sound2;
 
 
     void Start()
@@ -41,6 +41,7 @@ public class ItemsPj : MonoBehaviour
                 powerUpTime += Time.deltaTime;
                 if (powerUpTime <= duracionI)
                 {
+                    audio.PlayOneShot(sound2);
                     isInvincible = true;
                     Debug.Log("Invencible");
                 }
