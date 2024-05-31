@@ -8,6 +8,7 @@ TagManager:
   - pocion
   - livesText
   - Enemigo
+  - GameOver
   layers:
   - Default
   - TransparentFX

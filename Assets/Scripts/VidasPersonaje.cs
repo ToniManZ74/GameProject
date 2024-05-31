@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+
+
 
 public class VidasPersonaje : MonoBehaviour
 {
@@ -9,10 +12,22 @@ public class VidasPersonaje : MonoBehaviour
     public KeyCode oneVidaUpKey = KeyCode.U;
     public int vidaMaxPersonaje = 7;
     public ItemsPj PowerUpActual;
+    private GameObject gameOverPanel;
 
 
 
 
+    void Start()
+    {
+        gameOverPanel = GameObject.FindGameObjectWithTag("GameOver");
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);  
+        }
+        Time.timeScale = 1;
+
+
+    }
     void Update()
     {
         
@@ -38,8 +53,11 @@ public class VidasPersonaje : MonoBehaviour
 
             if (lives <= 0)
             {
+                lives = 0;
                 Debug.Log("Game Over");
-                Time.timeScale = 0f;
+                ShowGameOverPanel();
+                StartCoroutine(SlowDownTime());  
+
             }
             cameraVibration.StartVibration();
             UpdateLivesText();
@@ -69,5 +87,29 @@ public class VidasPersonaje : MonoBehaviour
                 livesText.text = lives.ToString();
             }
         }
+    }
+    void ShowGameOverPanel()
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Game Over panel reference is missing!");
+        }
+    }
+    IEnumerator SlowDownTime()
+    {
+        float duration = 1.0f; 
+        float startTime = Time.time;
+
+        while (Time.time < startTime + duration)
+        {
+            Time.timeScale = Mathf.Lerp(1, 0, (Time.time - startTime) / duration);
+            yield return null;
+        }
+
+        Time.timeScale = 0;  
     }
 }
