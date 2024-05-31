@@ -10,14 +10,15 @@ public class ItemsPj : MonoBehaviour
     public float duracionV = 3f;
     public float duracionI = 3f;
     public float powerUpTime = 0f;
-    public bool isInvincible = false; 
-
-
+    public bool isInvincible = false;
+    private AudioSource audio;
+    public AudioClip sound;
+    public AudioClip sound2;
 
 
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -40,6 +41,7 @@ public class ItemsPj : MonoBehaviour
                 powerUpTime += Time.deltaTime;
                 if (powerUpTime <= duracionI)
                 {
+                    audio.PlayOneShot(sound2);
                     isInvincible = true;
                     Debug.Log("Invencible");
                 }
@@ -55,6 +57,7 @@ public class ItemsPj : MonoBehaviour
                 powerUpTime += Time.deltaTime;
                 if (powerUpTime <= duracionI)
                 {
+                    audio.PlayOneShot(sound);
                     Time.timeScale = 0.5f;
                 }
                 else
