@@ -13,12 +13,14 @@ public class VidasPersonaje : MonoBehaviour
     public int vidaMaxPersonaje = 7;
     public ItemsPj PowerUpActual;
     private GameObject gameOverPanel;
-
+    private AudioSource audio;
+    public AudioClip sound;
 
 
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         gameOverPanel = GameObject.FindGameObjectWithTag("GameOver");
         if (gameOverPanel != null)
         {
@@ -59,6 +61,7 @@ public class VidasPersonaje : MonoBehaviour
                 StartCoroutine(SlowDownTime());  
 
             }
+            audio.PlayOneShot(sound);
             cameraVibration.StartVibration();
             UpdateLivesText();
         }
