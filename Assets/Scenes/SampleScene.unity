@@ -400,10 +400,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 512122674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 866588ba5cf622848a87a25c6c773c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 241a4b8a69ec2fa4696a878af9fd12b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  tag: Jugador
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +683,7 @@ GameObject:
   - component: {fileID: 712802728}
   m_Layer: 0
   m_Name: HitBox
-  m_TagString: Player
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2131,6 +2132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  tag: Enemy
 --- !u!58 &1674899529
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2381,7 +2383,7 @@ GameObject:
   - component: {fileID: 1945111534}
   m_Layer: 0
   m_Name: HitBox
-  m_TagString: Enemigo
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -18,4 +18,5 @@ public class VidasEnemigo : MonoBehaviour
             Destroy(gameObject); 
         }
     }
+
 }
