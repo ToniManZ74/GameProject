@@ -11,10 +11,15 @@ public class Movimiento : MonoBehaviour
     public Vector2 direccion;
     public SpriteRenderer sprite;
 
+    private Transform Transform;
+    public Vector2 Hrange = Vector2.zero;
+    public Vector2 Vrange = Vector2.zero;
+
 
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        Transform = GetComponent<Transform>();
     }
 
     void Update()
@@ -39,6 +44,11 @@ public class Movimiento : MonoBehaviour
             sprite.flipY = true;
         }
 
+    }
+
+    private void LateUpdate()
+    {
+        Transform.position = new Vector3(Mathf.Clamp(transform.position.x, Vrange.x, Vrange.y), Mathf.Clamp(transform.position.y, Hrange.x, Hrange.y), Transform.position.z);
     }
 
 }

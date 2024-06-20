@@ -2248,6 +2248,22 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 816346416}
+    - target: {fileID: 731235461758712795, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+      propertyPath: Hrange.x
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 731235461758712795, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+      propertyPath: Hrange.y
+      value: 3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 731235461758712795, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+      propertyPath: Vrange.x
+      value: -10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 731235461758712795, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+      propertyPath: Vrange.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1501060807398262266, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
       propertyPath: sound
       value: 
@@ -2264,7 +2280,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7518721898150946407, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7635163368506140807, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
