@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ItemsPj : MonoBehaviour
 {
-    public enum EstadoItem { SinItem, Invencibilidad, Velocidad};
+    public enum EstadoItem { SinItem, Invencibilidad, Velocidad };
     public EstadoItem estadoActual = EstadoItem.SinItem;
     public float duracionV = 3f;
     public float duracionI = 3f;
@@ -22,63 +22,6 @@ public class ItemsPj : MonoBehaviour
         audio = GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O)) //Pulsa O para hacerte invencible 
-        {
-            InvencibleOn();
-        }
-        else if (Input.GetKeyDown(KeyCode.P)) //Pulsa P para ralentizar la velocidad de juego
-        {
-            VelocidadOn();
-        }
-
-        switch (estadoActual)
-        {
-            case EstadoItem.SinItem:
-            break;
-
-            case EstadoItem.Invencibilidad:
-                powerUpTime += Time.deltaTime;
-                if (powerUpTime <= duracionI)
-                {
-                    audio.PlayOneShot(sound2);
-                    isInvincible = true;
-                    Debug.Log("Invencible");
-                }
-                else
-                {
-                    isInvincible = false;
-                    NoItemOn();
-                    Debug.Log("Fin de la invencibilidad");
-                }
-            break;
-
-            case EstadoItem.Velocidad:
-                powerUpTime += Time.deltaTime;
-                if (powerUpTime <= duracionI)
-                {
-                    audio.PlayOneShot(sound);
-                    Time.timeScale = 0.5f;
-                }
-                else
-                {
-                    Time.timeScale = 1f;
-                    NoItemOn();
-                }
-            break;
-        }
-    }
-
-    void InvencibleOn()
-    {
-        estadoActual = EstadoItem.Invencibilidad;
-    }
-
-    void VelocidadOn()
-    {
-        estadoActual = EstadoItem.Velocidad;
-    }
 
     void NoItemOn()
     {
@@ -90,11 +33,33 @@ public class ItemsPj : MonoBehaviour
     {
         if (colision.gameObject.CompareTag("reloj"))
         {
-            VelocidadOn();
+            powerUpTime += Time.deltaTime;
+            if (powerUpTime <= duracionI)
+            {
+                audio.PlayOneShot(sound);
+                Time.timeScale = 0.5f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                NoItemOn();
+            }
         }
         else if (colision.gameObject.CompareTag("pocion"))
         {
-            InvencibleOn();
+            powerUpTime += Time.deltaTime;
+            if (powerUpTime <= duracionI)
+            {
+                audio.PlayOneShot(sound2);
+                isInvincible = true;
+                Debug.Log("Invencible");
+            }
+            else
+            {
+                isInvincible = false;
+                NoItemOn();
+                Debug.Log("Fin de la invencibilidad");
+            }
         }
     }
 }
