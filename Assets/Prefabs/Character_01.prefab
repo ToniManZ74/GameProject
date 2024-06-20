@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6794718188137374129}
   - component: {fileID: 3705411519281638883}
   - component: {fileID: 731235461758712795}
-  - component: {fileID: 7518721898150946407}
   - component: {fileID: 2615416288011907376}
   - component: {fileID: 1501060807398262266}
   m_Layer: 0
@@ -198,20 +197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 10
   direccion: {x: 0, y: 0}
---- !u!114 &7518721898150946407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2554693752480291941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed1e0836e08b494c8a58c6df1ec7f85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hrange: {x: -4.2, y: 3.7}
-  Vrange: {x: -10.8, y: 10}
+  sprite: {fileID: 0}
+  Hrange: {x: 0, y: 0}
+  Vrange: {x: 0, y: 0}
 --- !u!114 &2615416288011907376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,3 +225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estadoActual: 0
+  duracionV: 3
+  duracionI: 3
+  powerUpTime: 0
+  isInvincible: 0
+  sound: {fileID: 0}
+  sound2: {fileID: 0}
