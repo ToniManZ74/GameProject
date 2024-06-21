@@ -74,15 +74,23 @@ public class ItemsPj : MonoBehaviour
 
     void InvencibleOn()
     {
+        if (estadoActual == EstadoItem.Velocidad)
+        {
+            Time.timeScale = 1f;
+            NoItemOn();
+        }
         estadoActual = EstadoItem.Invencibilidad;
         invencible.SetActive(true);
-        velocidad.SetActive(false);
     }
 
     void VelocidadOn()
     {
+        if (estadoActual == EstadoItem.Invencibilidad)
+        {
+            isInvincible = false;
+            NoItemOn();
+        }
         estadoActual = EstadoItem.Velocidad;
-        invencible.SetActive(false);
         velocidad.SetActive(true);
     }
 
