@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-
 public class VidasPersonaje : MonoBehaviour
 {
     public CameraVibration cameraVibration;
@@ -17,7 +16,6 @@ public class VidasPersonaje : MonoBehaviour
     public AudioClip sound;
 
 
-
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -28,11 +26,9 @@ public class VidasPersonaje : MonoBehaviour
         }
         Time.timeScale = 1;
 
-
     }
     void Update()
     {
-        
         if (Input.GetKeyDown(oneVidaLessKey))
         {
             LoseLife(1);
@@ -42,8 +38,6 @@ public class VidasPersonaje : MonoBehaviour
         {
             LifeUp();
         }
-
-        
     }
 
     public void LoseLife(int damage)

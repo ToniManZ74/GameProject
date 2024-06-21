@@ -4,8 +4,6 @@ using System;
 
 public class sceneController : MonoBehaviour
 {
-
-
     public void Jugar()
     {
         SceneManager.LoadScene("SampleScene");
@@ -14,8 +12,6 @@ public class sceneController : MonoBehaviour
     {
         SceneManager.LoadScene("MenuInicial");
     }
-
-
     public void Salir()
     {
         Debug.Log("Salir...");

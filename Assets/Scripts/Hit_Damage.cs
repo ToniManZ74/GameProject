@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hit_Damage : MonoBehaviour
@@ -17,21 +14,14 @@ public class Hit_Damage : MonoBehaviour
             {
                 collision.gameObject.GetComponentInParent<VidasEnemigo>().vida -= damage;
             }
-
         }
         
-
         if (tag == "Jugador")
         {
-
             if (collision.CompareTag("Jugador")) //Si el enemigo alcanza al jugador, se llamará a la funcion LoseLife que tiene el jugador para que pierda la cantidad de daño deseada
             {
                 collision.gameObject.GetComponentInParent<VidasPersonaje>().LoseLife(damage);
             }
-
         }
-
-
     }
-
 }

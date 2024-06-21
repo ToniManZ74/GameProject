@@ -2684,6 +2684,10 @@ PrefabInstance:
       propertyPath: invencible
       value: 
       objectReference: {fileID: 1361151077}
+    - target: {fileID: 2554693752480291941, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3705411519281638883, guid: ef9a915e2a6226d45bfbf486884794bf, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -2768,7 +2772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091011771918854822, guid: 9bfbf6aa5110b7e4db0ba8b383795f66, type: 3}
       propertyPath: m_Name
-      value: Character_02
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4091011771918854822, guid: 9bfbf6aa5110b7e4db0ba8b383795f66, type: 3}
       propertyPath: m_TagString

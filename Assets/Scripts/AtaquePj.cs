@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AtaquePj : MonoBehaviour
@@ -15,6 +13,4 @@ public class AtaquePj : MonoBehaviour
     {
         animacion.SetBool("Atacar", Input.GetKeyDown(KeyCode.Space)); //Pulsa espacio para atacar 
     }
-
-
 }

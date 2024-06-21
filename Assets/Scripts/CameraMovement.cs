@@ -17,8 +17,6 @@ public class CameraVibration : MonoBehaviour
 
     void Update()
     {
-
-
         if (isVibrating)
         {
             float offsetY = Mathf.Sin(Time.time * vibrationSpeed) * vibrationIntensity;
@@ -38,7 +36,6 @@ public class CameraVibration : MonoBehaviour
         vibrationTimer = 0f;
         isVibrating = true;
     }
-
 
     void StopVibration()
     {
